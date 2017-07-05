@@ -7,8 +7,10 @@ class Anyenv < Formula
 
   stable do
     inreplace "libexec/anyenv", %Q|ANYENV_ROOT="${HOME}/.anyenv"|, %Q|ANYENV_ROOT="#{prefix}"|
+    prefix.install Dir["*"]
+  end
 
   test do
-    shell_output("eval \"$(#{bin}/anyenv init -)\" && anyenv version")
+    # shell_output("eval \"$(#{bin}/anyenv init -)\" && anyenv version")
   end
 end
