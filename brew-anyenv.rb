@@ -2,12 +2,10 @@ class Anyenv < Formula
   desc "anyenv - all in one for **env" if respond_to? :desc
   homepage "https://github.com/riywo/anyenv"
 
-  head "https://github.com/riywo/anyenv.git"
-  version "5693de4"
-
   stable do
-    inreplace "libexec/anyenv", %Q|ANYENV_ROOT="${HOME}/.anyenv"|, %Q|ANYENV_ROOT="#{prefix}"|
-    prefix.install Dir["*"]
+    url "https://github.com/tamakiii/anyenv/archive/1.0.0.tar.gz"
+    version "1.0.0"
+    sha256 "a1caf384b9d401c0c672514302b8fda15aee50aecb6e147f985fdf371be0e30b"
   end
 
   test do
