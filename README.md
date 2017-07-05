@@ -5,7 +5,7 @@
 ### Usage
 
 ```
-$ brew tap mumoshu/anyenv
+$ brew tap tamakiii/anyenv
 ```
 
 And then install anyenv:
